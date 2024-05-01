@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NavBar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #dekha,#nadekha{
+            padding: 10px 15px;
+            color: white;
+            background-color: red;
+            border:none;
+            font-size: 24px;
+            font-weight: 550;
+            cursor: pointer;
+        }
+        #nadekha{
+            display: none;
+        }
+        #navbar{
+            background-color: rgb(210, 248, 247);
+            display: none;
+        }
+        #navbar ul{
+            list-style: none;
+        }
+        li{
+            text-align: center;
+            line-height: 2;
+            font-size: 24px;
+            font-weight: 550;
+            color: rgb(5, 121, 90);
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="dekha">Click Me</button>
+        <button id="nadekha">Unclick Me</button>
+    </nav>
+    <div id="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("dekha").onclick = ()=>{
+            document.getElementById("navbar").style.display="block";
+            document.getElementById("nadekha").style.display="block";
+            document.getElementById("dekha").style.display="none";
+        }
+        document.getElementById("nadekha").onclick = ()=>{
+            document.getElementById("navbar").style.display="none";
+            document.getElementById("nadekha").style.display="none";
+            document.getElementById("dekha").style.display="block";
+        }
+        
+    </script>
+</body>
+</html>
