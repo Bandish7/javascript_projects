@@ -28,7 +28,8 @@
             font-family: sans-serif;
             padding: 0;
             margin: 0;
-            font-style: italic
+            font-style: italic;
+            padding-bottom:20px ;
         }
         button{
             
@@ -45,6 +46,7 @@
     <div>
     <p>You Want to see the magic?</p>
     <h2>Click the button below</h2>
+    <p id="activecolor"></p>
     <button>Click Me</button>
 </div>
     <script>
@@ -59,14 +61,18 @@
 		  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
 		  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
         const a= colors.length;
+         const btn = document.getElementsByTagName('button')[0];
         
 
        
   
-        document.getElementsByTagName('button')[0].onclick =  function colorChange(){
+       
+        btn.addEventListener('click', function colorChange(){
             let i=Math.floor(Math.random()*a);
+            const b = colors[i];
             document.body.style.background = colors[i];
-        };
+            document.getElementById("activecolor").innerText = `Your background is  ${b}`
+        });
 
     </script>
 </body>

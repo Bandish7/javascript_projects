@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 60%;
+            margin: auto;
+            background-color: rgb(227, 227, 227);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .display{
+            border: 1px solid black;
+            width: 60%;
+            margin: 0 auto 5rem;
+            height: 100px;
+           
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: 550;
+            cursor: pointer;
+            border: 1px solid rgb(207, 204, 204);
+        }
+        .dec{
+            background-color: red;
+            color: white;
+            
+        }
+        .inc{
+            background-color: green;
+            color: white;
+            
+        }
+        .display{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #displaytext{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <p id="displaytext"></p>
+        </div>
+        <div class="btns">
+        <button  class="buttons dec">Decrease</button>
+        <button class="buttons res">Reset</button>
+        <button class="buttons inc">Increase</button>
+        </div>
+    </div>
+    <script>
+        let i = 0;
+        document.getElementById("displaytext").innerHTML = i;
+        document.getElementsByClassName("dec")[0].onclick = function(){
+            i--;
+            document.getElementById("displaytext").textContent = i;
+
+        }
+        document.getElementsByClassName("res")[0].onclick = ()=>{
+            i = 0;
+            document.getElementById("displaytext").textContent = i;
+        }
+        document.getElementsByClassName("inc")[0].onclick = ()=>{
+            i++;;
+            document.getElementById("displaytext").textContent = i;
+        }
+
+    </script>
+</body>
+</html>
